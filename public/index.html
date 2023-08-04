@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML CHEATSHEET</title>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: black; 
+            color: rgb(22, 255, 189);
+        }
+        .container{
+            display: grid;
+            grid-template-areas: 
+            "head head head"
+            "main main main"
+            "event1 event1 event1"
+            "event2 event2 event2"
+            "event3 event3 event3"
+            "event4 event4 event4"
+            "event5 event5 event5"
+            "footer footer footer";
+            padding: 10px;
+        }
+        #head{
+            grid-area: head;
+            font-family: 'Staatliches', cursive;
+            border-radius: 50px;
+            border: 2px solid rgb(22, 255, 189);
+
+        }
+        #main{
+            grid-area: main;
+            display: grid;
+            grid-template-areas: 
+            'ms1 ms1 ms1'
+            'ms2 ms2 ma1';
+        }
+        #event1{
+            font-family: 'Times New Roman', Times, serif;
+            grid-area: event1;
+            display: grid;
+            grid-template-areas: 
+            'e1s1 e1s1 e1a1'
+            'e1s2 e1s2 e1a2';
+        }
+        #event2{
+            font-family: 'Times New Roman', Times, serif;
+            grid-area: event2;
+            display: grid;
+            grid-template-areas: 
+            'e2s1 e2s1 e2a1'
+            'e2s2 e2s2 e2a2';
+        }
+        #event3{
+            font-family: 'Times New Roman', Times, serif;
+            grid-area: event3;
+            display: grid;
+            grid-template-areas: 
+            'e3s1 e3s1 e3a1'
+            'e3s2 e3s2 e3a2';
+        }
+        #event4{
+            font-family: 'Times New Roman', Times, serif;
+            grid-area: event4;
+            display: grid;
+            grid-template-areas: 
+            'e4s1 e4s1 e4a1'
+            'e4s2 e4s2 e4a2';
+        }
+        #event5{
+            font-family: 'Times New Roman', Times, serif;
+            grid-area: event5;
+            display: grid;
+            grid-template-areas: 
+            'e5s1 e5s1 e5a1'
+            'e5s2 e5s2 e5a2';
+        }
+        #test{
+            grid-area: test;
+        }
+        #footer{
+            grid-area: footer;
+        }
+        .container > div{
+
+            margin: 10px;
+        }
+        #main > div{
+            margin: 10px;
+        }
+        #event1 > div{
+
+            margin: 10px;
+        }
+        #event2 > div{
+
+            margin: 10px;
+            padding-left: 40px;
+        }
+        #event3 > div{
+
+            margin: 10px;
+            padding-left: 40px;
+        }
+        #event4 > div{
+
+            margin: 10px;
+            padding-left: 40px;
+        }
+        #event5 > div{
+
+            margin: 10px;
+            padding-left: 40px;
+        }
+        .ms1{
+            font-family: 'Staatliches', cursive;
+            grid-area: ms1;
+        }
+        .ms2{
+            font-size: 30px;
+            grid-area: ms2
+        }
+        .ma1{
+            padding-top: 65%;
+            grid-area: ma1;
+        }
+        .e1s1{
+            font-size: 30px;
+            grid-area: e1s1;
+        }
+        .e1s2{
+            font-size: 30px;
+            grid-area: e1s2;
+        }
+        .e1a1{
+            padding-left: 160px;
+            padding-top: 25%;
+            grid-area: e1a1;
+        }
+        .e1a2{
+            padding-left: 160px;
+            grid-area: e1a2;
+        }
+        .e2s1{
+            font-size: 30px;
+            grid-area: e2s1;
+        }
+        .e2s2{
+            font-size: 30px;
+            grid-area: e2s2;
+        }
+        .e2a1{
+            padding-left: 160px;
+            padding-top: 25%;
+            grid-area: e2a1;
+        }
+        .e2a2{
+            padding-left: 160px;
+            padding-top: 25%;
+            grid-area: e2a2;
+        }
+        .e3s1{
+            font-size: 30px;
+            grid-area: e3s1;
+        }
+        .e3s2{
+            font-size: 30px;
+            grid-area: e3s2;
+        }
+        .e3a1{
+            padding-left: 160px;
+            padding-top: 25%;
+            grid-area: e3a1;
+        }
+        .e3a2{
+            padding-left: 160px;
+            padding-top: 25%;
+            grid-area: e3a2;
+        }
+        .e4s1{
+            font-size: 30px;
+            grid-area: e4s1;
+        }
+        .e4s2{
+            font-size: 30px;
+            grid-area: e4s2;
+        }
+        .e4a1{
+            padding-left: 160px;
+            padding-top: 25%;
+            grid-area: e4a1;
+        }
+        .e4a2{
+            padding-left: 160px;
+            padding-top: 25%;
+            grid-area: e4a2;
+        }
+        .e5s1{
+            font-size: 30px;
+            grid-area: e5s1;
+        }
+        .e5s2{
+            font-size: 30px;
+            grid-area: e5s2;
+        }
+        .e5a1{
+            padding-left: 160px;
+            padding-top: 25%;
+            grid-area: e5a1;
+        }
+        .e5a2{
+            padding-left: 160px;
+            padding-top: 25%;
+            grid-area: e5a2;
+        }
+        .image{
+            text-align: left;
+        }
+        table{
+            border-collapse: collapse;
+            width: 100%; 
+            border: 2px solid reds;
+        }
+        .cat{
+            border-collapse: collapse;
+            width: 50%;
+            margin-left: 27%;
+            margin-top: 30px;
+        }
+        .mask {
+            filter: drop-shadow(0 0 20px rgb(22, 255, 189));
+        }
+        h1{
+            text-align: center;
+        }
+        .basic{
+            border-collapse: collapse;
+            border: 4px solid #66fcf1;
+        }
+        li{
+            font-weight: bold;
+            margin: 30px;
+        }
+        ul{
+            color: white;
+            padding: 20px;
+            margin: 70px;
+            border-radius: 2px;
+            box-shadow: 2px 2px 10px 13px #7fecad;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="head">
+            <table>
+                <tr>
+                    <td class="mask"><img src="cheetlogo1.png" alt="Logo" width="80px" style="border-radius: 80%; margin-left: 30px;"></td>
+                    <td><h1 style="font-size: 48px;">HTML CHEATSHEET</h1></td>
+                </tr>
+            </table>
+        </div>
+        <div id="main">
+            <div class="ms1">
+                <h1 style="text-align: center;">Category</h1>
+                <table class="cat">
+                    <tr>
+                        <td>
+                            <a href="#basic"><img src="tag.svg" alt="Basic" width="65px" style="margin-left: 10px; "></a>
+                            <h2>Basic Tags</h2>
+                        </td>
+                        <td>
+                            <a href="#body"><img src="braces.svg" alt="Brackets" width="65px" style="margin-left: 60px;"></a>
+                            <h2 style="margin-left: 50px;">Body Tags</h2>
+                        </td>
+                        <td>
+                            <a href="#text"><img src="textarea.svg" alt="Text" width="65px" style="margin-left: 10px;"></a>
+                            <h2>Text Tags</h2>
+                        </td>
+                        <td>
+                            <a href="#list"><img src="list.svg" alt="List" width="65px" style="margin-left: 60px;"></a>
+                            <h2 style="margin-left: 55px;">List Tags</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#table"><img src="table.svg" alt="Table" width="65px" style="margin-left: 10px;"></a>
+                            <h2>Table Tags</h2>
+                        </td>
+                        <td>
+                            <a href="#tablee"><img src="table-thin.svg" alt="Table" width="65px" style="margin-left: 60px;"></a>
+                            <h2>Table Attributes Tags</h2>
+                        </td>
+                        <td>
+                            <a href="#form"><img src="wpforms.svg" alt="Forms" width="65px" style="margin-left: 10px;"></a>
+                            <h2>Form Tags</h2>
+                        </td>
+                        <td>
+                            <a href="#link"><img src="link.svg" alt="Link" width="65px" style="margin-left: 60px;"></a>
+                            <h2 style="margin-left: 55px;">Link Tags</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td >
+                            <a href="#html5"><img src="html5.svg" alt="Html5" width="65px" style="margin-left: 10px;"></a>
+                            <h2>Html5 Tags</h2>
+                        </td>
+                        <td>
+                            <a href="#formatting"><img src="format.svg" alt="Format" width="65px" style="margin-left: 60px;"></a>
+                            <h2 style="margin-left: 45px;">Formatting Tags</h2>
+                        </td>
+                        <td>
+                            <a href="#graphics"><img src="gpu-card.svg" alt="Graphics" width="65px" style="margin-left: 10px;"></a>
+                            <h2>Graphics Tags</h2>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="ma1">
+                <a href="#main"><img src="arrow.svg" alt="Table" width="80px"></a>
+            </div>
+            <div class="ms2">
+                <div id="basic">
+                    <h1 style="color: red;">Basic Tags</h1>
+                    <ul>
+                        <li>&lt;html&gt;  &lt;/html&gt;</li>
+                        <dd>Creates an HTML document</dd>
+                        <li>&lt;head&gt;  &lt;/head&gt;</li>
+                        <dd>Sets off the title & other info that isn't displayed</dd>
+                        <li>&lt;body&gt;  &lt;/body&gt;</li>
+                        <dd>Sets off the visible portion of the document</dd>
+                        <li>&lt;title&gt;  &lt;/title&gt;</li>
+                        <dd>Puts name of the document in the title bar; when
+                            bookmarking pages, this is what is bookmarked</dd>
+                    </ul>
+                </div>
+            </div>
+           
+        </div>
+        <div id=event1>
+            <div class="e1s1">
+                <div id="body">
+                    <h1 style="color: red;">Body Tags</h1>
+                    <ul>
+                        <li>&lt;body bgcolor=?&gt;</li>
+                        <dd>Sets background color, using name or hex value</dd>
+                        <li>&lt;body text=?&gt;</li>
+                        <dd>Sets text color, using name or hex value</dd>
+                        <li>&lt;body link=?&gt;</li>
+                        <dd>Sets color of links, using name or hex value</dd>
+                        <li>&lt;body vlink=?&gt;</li>
+                        <dd>Sets color of visited links, using name or hex value</dd>
+                        <li>&lt;body alink=?&gt;</li>
+                        <dd>Sets color of active links (while mouse-clicking)</dd>
+                    </ul>
+                </div>
+            </div>
+            <div class="e1s2">
+                <div id="text">
+                    <h1 style="color: red;">Text Tags</h1>
+                    <ul>
+                        <li>&lt;pre&gt;  &lt;/pre&gt;</li>
+                        <dd>Creates preformatted text</dd>
+                        <li>&lt;h1&gt;  &lt;/h1&gt;   ------>   &lt;h6&gt;  &lt;/h6&gt;</li>
+                        <dd>Creates headlines -- H1=largest, H6=smallest</dd>
+                        <li>&lt;b&gt;  &lt;/b&gt;</li>
+                        <dd>Creates bold text (should use <strong> instead)</dd>
+                        <li>&lt;i&gt;  &lt;/i&gt;</li>
+                        <dd>Creates italicized text (should use <em> instead)</dd>
+                        <li>&lt;tt&gt;  &lt;/tt&gt;</li>
+                        <dd>Creates typewriter-style text</dd>
+                        <li>&lt;code&gt;  &lt;/code&gt;</li>
+                        <dd>Used to define source code, usually monospace</dd>
+                        <li>&lt;cite&gt;  &lt;/cite&gt;</li>
+                        <dd>Creates a citation, usually processed in italics</dd>
+                        <li>&lt;address&gt;  &lt;/address&gt;</li>
+                        <dd>Creates address section, usually processed in italics</dd>
+                        <li>&lt;em&gt;  &lt;/em&gt;</li>
+                        <dd>Emphasizes a word (usually processed in italics)</dd>
+                        <li>&lt;strong&gt;  &lt;/strong&gt;</li>
+                        <dd>Emphasizes a word (usually processed in bold)</dd>
+                        <li>&lt;font size=?&gt;  &lt;/font&gt;</li>
+                        <dd>Sets size of font - 1 to 7 (should use CSS instead)</dd>
+                        <li>&lt;font color=?&gt;  &lt;/font&gt;</li>
+                        <dd>Sets font color (should use CSS instead)</dd>
+                        <li>&lt;font face=?&gt;  &lt;/font&gt;</li>
+                        <dd>Defines the font used (should use CSS instead)</dd>
+                    </ul>
+                </div>
+            </div>
+            <div class="e1a1">
+                <a href="#head"><img src="arrow.svg" alt="Table" width="80px"></a>
+            </div>
+            <div class="e1a2" style="margin-top: 250%;">
+                <a href="#head"><img src="arrow.svg" alt="Table" width="80px"></a>
+            </div>
+        </div>
+        <div id="event2">
+            <div class="e2s1">
+                <div id="list">
+                    <h1 style="color: red;">List Tags</h1>
+                        <ul>
+                            <li>&lt;ul&gt;  &lt;/ul&gt;</li>
+                            <dd>Creates an unordered list</dd>
+                            <li>&lt;ol start=?&gt;  &lt;/ol&gt;</li>
+                            <dd>Creates an ordered list (start=xx,where xx is a counting number)</dd>
+                            <li>&lt;li&gt;  &lt;/li&gt;</li>
+                            <dd>Encompasses each list item</dd>
+                            <li>&lt;dl&gt;  &lt;/dl&gt;</li>
+                            <dd>Creates a definition list</dd>
+                            <li>&lt;dt&gt;  &lt;/dt&gt;</li>
+                            <dd>Precedes eachdefintion term</dd>
+                            <li>&lt;dd&gt;  &lt;/dd&gt;</li>
+                            <dd>Precedes eachdefintion</dd>
+                        </ul>
+                </div>
+            </div>
+            <div class="e2s2">
+                <div id="table">
+                    <h1 style="color: red;">Table Tags</h1>
+                    <ul>
+                        <li>&lt;table&gt;  &lt;/table&gt;</li>
+                        <dd>Creates a table</dd>
+                        <li>&lt;tr&gt;  &lt;/tr&gt;</li>
+                        <dd>Sets off each row in a table</dd>
+                        <li>&lt;td&gt;  &lt;/td&gt;</li>
+                        <dd>Sets off each cell in a row</dd>
+                        <li>&lt;th&gt;  &lt;/th&gt;</li>
+                        <dd>Sets off the table header (a normal cell with bold,centered text)</dd>
+                    </ul>
+                </div>
+            </div>
+            <div class="e2a1">
+                    <a href="#head"><img src="arrow.svg" alt="Table" width="80px"></a>
+            </div>
+            <div class="e2a2">
+                    <a href="#head"><img src="arrow.svg" alt="Table" width="80px"></a>
+            </div>
+        </div>
+        <div id="event3">
+            <div class="e3s1">
+                <div id="tablee">
+                    <h1 style="color: red;">Table Attributes</h1>
+                    <ul>
+                        <li>&lt;table border=?&gt;</li>
+                        <dd>Sets the width of the border around table cells</dd>
+                        <li>&lt;table cellspacing&gt;</li>
+                        <dd>Sets amount of space between table cells</dd>
+                        <li>&lt;table cellpadding=?&gt;</li>
+                        <dd>Sets amount of space between a cell's border andits contents</dd>
+                        <li>&lt;table width=?&gt;</li>
+                        <dd>Sets width of the table in pixels or as a percentage</dd>
+                        <li>&lt;tr align=?&gt;</li>
+                        <dd>Sets alignment for cells within the row(left/center/right)</dd>
+                        <li>&lt;td align=?&gt;</li>
+                        <dd>Sets alignment for cells (left/center/right)</dd>
+                        <li>&lt;tr valign=?&gt;</li>
+                        <dd>Sets vertical alignment for cells within the row(top/middle/bottom)</dd>
+                        <li>&lt;td valign=?&gt;</li>
+                        <dd>Sets vertical alignment for cell (top/middle/bottom)</dd>
+                        <li>&lt;td rowspan=?&gt;</li>
+                        <dd>Sets number of rows a cell should span (default=1)</dd>
+                        <li>&lt;td colspan=?&gt;</li>
+                        <dd>Sets number of columns a cell should span</dd>
+                        <li>&lt;td nowrap&gt;</li>
+                        <dd>Prevents lines within a cell from being broken to fit</dd>
+                    </ul>
+                </div>
+            </div>
+            <div class="e3s2">
+                <div id="form">
+                    <h1 style="color: red;">Form Tags</h1>
+                    <ul>
+                        <li>&lt;form&gt;  &lt;/form&gt;</li>
+                        <dd>Defines a form</dd>
+                        <li>&lt;select multiple name=? Size=?&gt;  &lt;/select&gt;</li>
+                        <dd>Creates a scrolling menu. Size sets the number of
+                            menu items visible before user needs to scroll.</dd>
+                        <li>&lt;select name=?&gt;  &lt;/select&gt;</li>
+                        <dd>Creates a pulldown menu</dd>
+                        <li>&lt;option&gt;</li>
+                        <dd>Sets off each menu item</dd>
+                        <li>&lt;textarea name=? cols="x" rows="y"&gt;  &lt;/textarea&gt;</li>
+                        <dd>Creates a text box area. Columns set the width;
+                            rows set the height.</dd>
+                        <li>&lt;input type="checkbox" name=? value=?&gt;</li>
+                        <dd>Creates a checkbox.</dd>
+                        <li>&lt;input type="checkbox" name=? value=? checked&gt;</li>
+                        <dd>Creates a checkbox which is pre-checked.</dd>
+                        <li>&lt;input type="radio" name=? value=?&gt;</li>
+                        <dd>Creates a radio button.</dd>
+                        <li>&lt;input type="radio" name=? value=? checked&gt;</li>
+                        <dd>Creates a radio button which is pre-checked.</dd>
+                        <li>&lt;input type="submit" value=?&gt;</li>
+                        <dd>Creates a one-line text area. Size sets length, in
+                            characters.</dd>
+                        <li>&lt;input type="image" name=? src=? border=? alt=?&gt;</li>
+                        <dd>Creates a submit button using an image.</dd>
+                        <li>&lt;input type="reset"&gt;</li>
+                        <dd>Creates a reset button</dd>
+                    </ul>
+                </div>
+            </div>
+            <div class="e3a1">
+                <a href="#head"><img src="arrow.svg" alt="Table" width="80px"></a>
+            </div>
+            <div class="e3a2">
+                <a href="#head"><img src="arrow.svg" alt="Table" width="80px"></a>
+            </div>
+        </div>
+        <div id="event4">
+            <div class="e4s1">
+                <div id="html5">
+                    <h1 style="color: red;">HTML5 Tags</h1>
+                    <ul>
+                        <li>&lt;html&gt;  &lt;/html&gt;</li>
+                        <dd>Creates an HTML document</dd>
+                        <li>&lt;head&gt;  &lt;/head&gt;</li>
+                        <dd>Sets off the title & other info that isn't displayed</dd>
+                        <li>&lt;body&gt;  &lt;/body&gt;</li>
+                        <dd>Sets off the visible portion of the document</dd>
+                        <li>&lt;title&gt;  &lt;/title&gt;</li>
+                        <dd>Puts name of the document in the title bar; when
+                            bookmarking pages, this is what is bookmarked</dd>
+                    </ul>
+                </div>
+            </div>
+            <div class="e4s2">
+                <div id="link">
+                    <h1 style="color: red;">Link Tags</h1>
+                    <ul>
+                        <li>&lt;a href="URL"&gt;clickable text&lt;/a&gt;</li>
+                        <dd>Creates a hyperlink to a Uniform Resource Locator</dd>
+                        <li>&lt;a href="malito:EMAIL_ADDRESS"&gt;clickable text&lt;/a&gt;</li>
+                        <dd>Creates a hyperlink to an email address</dd>
+                        <li>&lt;a name="Name"&gt;</li>
+                        <dd>Creates a target location within a document</dd>
+                        <li>&lt;a href="#NAME"&gt;clickable text&lt;/a&gt;</li>
+                        <dd>Creates a link to that target location</dd>
+                    </ul>
+                </div>
+            </div>
+            <div class="e4a1">
+                <a href="#head"><img src="arrow.svg" alt="Table" width="80px"></a>
+            </div>
+            <div class="e4a2">
+                <a href="#head"><img src="arrow.svg" alt="Table" width="80px"></a>
+            </div>
+        </div>
+        <div id="event5">
+            <div class="e5s1">
+                <div id="formatting">
+                    <h1 style="color: red;">Fomatting Tags</h1>
+                    <ul>
+                        <li>&lt;p&gt;  &lt;/p&gt;</li>
+                        <dd>Creates a new paragraph</dd>
+                        <li>&lt;br&gt;</li>
+                        <dd>AInserts a line break (carriage return)</dd>
+                        <li>&lt;blackquote&gt;  &lt;/blackquote&gt;</li>
+                        <dd>Puts content in a quote - indents text from both sides</dd>
+                        <li>&lt;div&gt;  &lt;/div&gt;</li>
+                        <dd>Used to format block content with CSS/dd>
+                        <li>&lt;span&gt;  &lt;/span&gt;</li>
+                        <dd>Used to format inline content with CSS</dd>
+                    </ul>
+                </div>
+            </div>
+            <div class="e5s2">
+                <div id="graphics">
+                    <h1 style="color: red;">Graphics Tags</h1>
+                    <ul>
+                        <li>&lt;hr&gt;</li>
+                        <dd>Inserts a horizontal rule</dd>
+                        <li>&lt;hr size=?&gt;</li>
+                        <dd>Sets size (height) of horizontal rule</dd>
+                        <li>&lt;hr width=?&gt;</li>
+                        <dd>Sets width of rule (as a % or absolute pixel length)</dd>
+                        <li>&lt;hr noshade&gt;</li>
+                        <dd>Creates a horizontal rule without a shadow</dd>
+                        <li>&lt;img src="URL"/&gt;</li>
+                        <dd>Adds image; it is a separate file located at the URL</dd>
+                        <li>&lt;img src="URL" align=?&gt;</li>
+                        <dd>Aligns image left/right/center/bottom/top/middle (use CSS)</dd>
+                        <li>&lt;img src="URL" border=?&gt;</li>
+                        <dd>Sets size of border surrounding image (use CSS)</dd>
+                        <li>&lt;img src="URL" height=?&gt;</li>
+                        <dd>Sets height of image, in pixels</dd>
+                        <li>&lt;img src="URL" width=?&gt;</li>
+                        <dd>Sets width of image, in pixels</dd>
+                        <li>&lt;img src="URL" alt=?&gt;</li>
+                        <dd>Sets the alternate text for browsers that can't process images (required by the ADA)</dd>
+                    </ul>
+                </div>
+            </div>
+            <div class="e5a1">
+                <a href="#head"><img src="arrow.svg" alt="Table" width="80px"></a>
+            </div>
+            <div class="e5a2">
+                <a href="#head"><img src="arrow.svg" alt="Table" width="80px"></a>
+            </div>
+           
+        </div>
+        
+    </div>
+    <footer style="text-align: center; font-size: 30px;">Copyright &#169; All Rights reserved by Me</footer>
+</body>
+</html>
